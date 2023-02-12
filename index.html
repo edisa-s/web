@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekti - Online Tickets</title>
+  </head>
+  <div class="navbar">
+    <h6>Projekti Web</h6>
+
+    <div class="nav-links">
+      <div class="nav-link ticket-link">
+        <a href="index.html">Main</a>
+      </div>
+      <div class="nav-link about-link">
+        <a href="sherbimet.html">Sherbimet</a>
+      </div>
+      <div class="nav-link contact-link">
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="nav-auth">
+      <div class="nav-auth-link nav-login">
+        <button class="btn">Log In</button>
+      </div>
+      <div class="nav-auth-link nav-signup">
+        <button class="btn">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <body onload="slider()">
+    <div class="content">
+      <div class="banner">
+        <div class="slider">
+          <img
+            src="https://aimconsulting.com/wp-content/uploads/2020/10/angular-website-development.jpg"
+            id="slideImg"
+          />
+        </div>
+        <div class="overlay">
+          <div class="content">
+            <h1>Welcome to our project</h1>
+            <h3>qweqweqwewqeqwe123123123</h3>
+            <div>
+              <form action="about.html">
+                <button type="submit">Learn More</button>
+                <button type="submit">Contact Us</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideImg = document.getElementById("slideImg");
+
+      var images = new Array(
+        "img/slide1.jpg",
+        "img/slide2.jpg",
+        "img/slide3.jpg",
+        "img/slide1.jpg"
+      );
+
+      var len = images.length;
+      var i = 0;
+
+      function slider() {
+        if (i > len - 1) {
+          i = 0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout("slider()", 1000);
+      }
+    </script>
+    <section class="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="img/money.png" />
+          <h3>Lorem Ipsum</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="box">
+          <img src="img/safety.png" />
+          <h3>Lorem Ipsum</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="box">
+          <img src="img/time.png" />
+          <h3>Lorem Ipsum</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>Inxhinieri e Web, Copyright &copy; 2021/2022</p>
+    </div>
+  </body>
+</html>
